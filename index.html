@@ -1,25 +1,99 @@
 <html>
-  <head></head>
+  	<head></head>
 <body>
-    <nav></nav>
-    
+    <nav id="nav"></nav>
+    <div class="container" id="home">
+
+    <section class="section" id="heading">
+      <h1 class="title" id="title">
+            
+      </h1>
+    </section>
+
+    <div class="your-class">
+	    <div>your content</div>
+	    <div>your content</div>
+	    <div>your content</div>
+	    <div>your content</div>
+	    <div>your content</div>
+	    <div>your content</div>
+	    <div>your content</div>
+	    <div>your content</div>
+	    <div>your content</div>
+	  </div>
+
+    <section id="banner" class="section"><div class="container"><div class="columns"><div class="column is-four-fifths slider-container"><div aria-label="Slideshow" id="banner-slider" class="vueperslides no-shadow vueperslides--slide-multiple vueperslides--bullets-outside vueperslides--no-animation"><!----><div class="vueperslides__inner"><div aria-live="polite" class="vueperslides__parallax-wrapper" style="padding-bottom:25%"><div class="vueperslides__track"><div class="vueperslides__track-inner" style="transition-duration:0s;transform:translate3d(0,0,0);will-change:auto"><div aria-hidden="false" class="vueperslide show-more vueperslide--visible" style="background-image:url(https://raw.githubusercontent.com/HendricksK/sacos_images/master/1/basil_williams_top_senior_1948.jpg);width:31.333333333333332%;margin-right:3%;background-color:#e3b602"><!----><!----><div class="vueperslide__content-wrapper"><!----><div class="vueperslide__content">Basil Williams was one of three brothers, he was the oldest, his Brother Ralph Williams was also a cyclist the father of Michael Williams. Basil was a Champion on the Road and track. These cyclist were in the forefront of where the sport originated from. They could not compete at the highest  level due to apartheid. These are our struggle hero's.</div></div><!----></div><div aria-hidden="false" class="vueperslide show-more vueperslide--visible" style="background-image:url(https://raw.githubusercontent.com/HendricksK/sacos_images/master/2/mark_hendricks_winning_last_stage_of_tour_de_boland.jpg);width:31.333333333333332%;margin-right:3%;background-color:#e3b602"><!----><!----><div class="vueperslide__content-wrapper"><!----><div class="vueperslide__content">Mark Hendricks Winning Last Stage of Tour de Boland</div></div><!----></div><div aria-hidden="false" class="vueperslide show-more vueperslide--visible" style="background-image:url(https://raw.githubusercontent.com/HendricksK/sacos_images/master/3/tessel_crotz_vygekraal_staduim.jpg);width:31.333333333333332%;margin-right:3%;background-color:#e3b602"><!----><!----><div class="vueperslide__content-wrapper"><!----><div class="vueperslide__content">Our Worcester Champion Tessel Crotz a family of Cycling Hero's</div></div><!----></div><div aria-hidden="true" class="vueperslide show-more" style="background-image:url(https://raw.githubusercontent.com/HendricksK/sacos_images/master/3/tessel_crotz_wc_hero.jpg);width:31.333333333333332%;margin-right:3%;background-color:#e3b602"><!----><!----><div class="vueperslide__content-wrapper"><!----><div class="vueperslide__content">Our Worcester Champion Tessel Crotz a family of Cycling Hero's</div></div><!----></div><div aria-hidden="true" class="vueperslide show-more" style="background-image:url(https://raw.githubusercontent.com/HendricksK/sacos_images/master/track/1_esselpark/esselpark_1.jpg);width:31.333333333333332%;margin-right:3%;background-color:#e3b602"><!----><!----><div class="vueperslide__content-wrapper"><!----><div class="vueperslide__content">Esselpark Stadium Wocester, Circa 1984/5</div></div><!----></div><div aria-hidden="true" class="vueperslide show-more" style="background-image:url(https://raw.githubusercontent.com/HendricksK/sacos_images/master/untagged/tour_de_boland_schus_nissan.jpg);width:31.333333333333332%;margin-right:3%;background-color:#e3b602"><!----><!----><div class="vueperslide__content-wrapper"><!----><div class="vueperslide__content">Tour de Boland, sponsored by Schus Nissan, Boland Team. Raybin Windvogel</div></div><!----></div><div aria-hidden="true" class="vueperslide show-more" style="background-image:url(https://raw.githubusercontent.com/HendricksK/sacos_images/master/rider/4_michael_williams/micheal_williams.jpeg);width:31.333333333333332%;margin-right:3%;background-color:#e3b602"><!----><!----><div class="vueperslide__content-wrapper"><!----><div class="vueperslide__content">Micheal Williams vygie kraal track</div></div><!----></div><!----><!----></div></div></div><!----><!----><!----><!----><!----></div><!----><!----></div></div></div></div></section>
+     <section class="section" id="content">
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="description">
+            <span class="content" id="contentdescription"></span>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+      	<span id="email"></span>
+        <a href="" id="emailto" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow"></a>
+      </div>
+    </section>
+
+  </div>
+<footer id="footer">
+	
+</footer>
 </body>
+
 <script type="module" src="/modules/head.js"></script>
+<script type="module" src="/modules/nav.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script text="text/javascript">
+$(document).ready(function(){
+  $('.your-class').slick({
+		infinite: true,
+	  	slidesToShow: 3,
+	  	slidesToScroll: 3
+  });
+});
+</script> 
+
 <script type="text/javascript">
+
+var show_more_btns =  document.getElementsByClassName('show-more')
+
+if (typeof(show_more_btns) != 'undefined' && show_more_btns != null) {
+  for (var i = 0; i < show_more_btns.length; i++) {
+      console.log(show_more_btns[i].children[0])
+      show_more_btns[i].children[0].setAttribute('id', 'show-more-'+i); 
+      var show_more_id = 'show-more-'+i
+      document.getElementById(show_more_id).addEventListener('click', showMoreOpenClose);
+  }
+}
+
+function showMoreOpenClose(e) {
+
+	if (document.getElementById(e.target.parentElement.id).classList.length > 1) {
+
+		var class_list = document.getElementById(e.target.parentElement.id).classList
+
+		if (class_list[1] === 'open') {
+		  document.getElementById(e.target.parentElement.id).classList.remove('open')
+		  document.getElementById(e.target.parentElement.id).classList.add('closed')
+		} else if (class_list[1] === 'closed') {
+		  document.getElementById(e.target.parentElement.id).classList.remove('closed')
+		  document.getElementById(e.target.parentElement.id).classList.add('open')
+		}          
+	} else {
+	  	document.getElementById(e.target.parentElement.id).classList.add('open')
+	}
+}
 
 const myPromise = new Promise((resolve, reject) => {  
     let condition;  
-    
-    document.getElementById('heading').innerHTML = 'here is some more stuff';
-    // if() {    
-    //     resolve('Promise is resolved successfully.');  
-    // } else {    
-    //     reject('Promise is rejected');  
-    // }
 });
 
-// myPromise.then((message) => {  
-//     console.log(message);
-// });
 </script>
 </html>
