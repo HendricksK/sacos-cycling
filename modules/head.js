@@ -1,7 +1,7 @@
 let head = document.head.innerHTML
 head = head 
 	+ '<meta charset="UTF-8">'
-	+ '<base href="/">'
+	+ '<base href="/sacos-cycling/">'
 	+ '<title>Sacos Cycling</title>'
 	+ '<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">'
 	+ '<link rel="stylesheet" href="../assets/css/bulma.min.css">'
