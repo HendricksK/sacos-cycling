@@ -1,3 +1,4 @@
+let baseurl = window.localStorage.getItem('baseurl')
 let nav =
     '<title></title>' +
     '<nav class="navbar" role="navigation" aria-label="main navigation">' + 
@@ -6,13 +7,13 @@ let nav =
           '<span class="material-icons" style="color:#e3b602">'+            
           '</span>' +
         '</a>' +
-        '<a class="navbar-item" style="color:#e3b602" href="#">' +
+        '<a class="navbar-item" style="color:#e3b602" href="' + baseurl + '/pages/articles">' +
             'Articles' + 
         '</a>' +
-        '<a class="navbar-item" style="color:#e3b602" href="#">' +
+        '<a class="navbar-item" style="color:#e3b602" href="' + baseurl + '/pages/riders">' +
             'Riders' + 
         '</a>' + 
-        '<a class="navbar-item" style="color:#e3b602" href="#">' +
+        '<a class="navbar-item" style="color:#e3b602" href="' + baseurl + '/pages/about">' +
             'About' + 
         '</a>' + 
       '</div>' + 

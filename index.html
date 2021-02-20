@@ -2,74 +2,16 @@
   	<head></head>
 <body>
     <nav id="nav"></nav>
+    <div class="pageloader is-active" id="pageloader"><span class="title">Sacos Cycling History Loading</span></div>
     <div class="container" id="home">
         <section class="section" id="heading">
-          <h1 class="title" id="title">
-                
-          </h1>
+            <h1 class="title" id="title"></h1>
         </section>
         <section id="banner" class="section">
             <div class="container">
                 <div class="columns">
                     <div class="column is-full slider-container">
-                        <div class="rider-slider">
-                            <div class="slide">
-                                <img src="https://raw.githubusercontent.com/HendricksK/sacos_images/master/1/basil_williams_top_senior_1948.jpg">
-                                <div class="slide-data">
-                                    <div class="content show-more">Basil Williams was one of three brothers, he was the oldest, his Brother Ralph Williams was also a cyclist the father of Michael Williams. Basil was a Champion on the Road and track. These cyclist were in the forefront of where the sport originated from. They could not compete at the highest  level due to apartheid. These are our struggle hero's.
-                                    </div>
-                                </div>
-                                <span class="show-more-button"></span>
-                            </div>
-                            <div class="slide">
-                                <img src="https://raw.githubusercontent.com/HendricksK/sacos_images/master/2/mark_hendricks_winning_last_stage_of_tour_de_boland.jpg">
-                                <div class="slide-data">
-                                    <div class="content show-more">Basil Williams was one of three brothers, he was the oldest, his Brother Ralph Williams was also a cyclist the father of Michael Williams. Basil was a Champion on the Road and track. These cyclist were in the forefront of where the sport originated from. They could not compete at the highest  level due to apartheid. These are our struggle hero's.
-                                    </div>
-                                </div>
-                                <span class="show-more-button"></span>
-                            </div>
-                            <div class="slide">
-                                <img src="https://raw.githubusercontent.com/HendricksK/sacos_images/master/3/tessel_crotz_vygekraal_staduim.jpg">
-                                <div class="slide-data">
-                                    <div class="content show-more">Basil Williams was one of three brothers, he was the oldest, his Brother Ralph Williams was also a cyclist the father of Michael Williams. Basil was a Champion on the Road and track. These cyclist were in the forefront of where the sport originated from. They could not compete at the highest  level due to apartheid. These are our struggle hero's.
-                                    </div>
-                                </div>
-                                <span class="show-more-button"></span>
-                            </div>
-                            <div class="slide">
-                                <img src="https://raw.githubusercontent.com/HendricksK/sacos_images/master/3/tessel_crotz_wc_hero.jpg">
-                                <div class="slide-data">
-                                    <div class="content show-more">Basil Williams was one of three brothers, he was the oldest, his Brother Ralph Williams was also a cyclist the father of Michael Williams. Basil was a Champion on the Road and track. These cyclist were in the forefront of where the sport originated from. They could not compete at the highest  level due to apartheid. These are our struggle hero's.
-                                    </div>
-                                </div>
-                                <span class="show-more-button"></span>
-                            </div>
-                            <div class="slide">
-                                <img src="https://raw.githubusercontent.com/HendricksK/sacos_images/master/track/1_esselpark/esselpark_1.jpg">
-                                <div class="slide-data">
-                                    <div class="content show-more">Basil Williams was one of three brothers, he was the oldest, his Brother Ralph Williams was also a cyclist the father of Michael Williams. Basil was a Champion on the Road and track. These cyclist were in the forefront of where the sport originated from. They could not compete at the highest  level due to apartheid. These are our struggle hero's.
-                                    </div>
-                                </div>
-                                <span class="show-more-button"></span>
-                            </div>
-                            <div class="slide">
-                                <img src="https://raw.githubusercontent.com/HendricksK/sacos_images/master/untagged/tour_de_boland_schus_nissan.jpg">
-                                <div class="slide-data">
-                                    <div class="content show-more">Basil Williams was one of three brothers, he was the oldest, his Brother Ralph Williams was also a cyclist the father of Michael Williams. Basil was a Champion on the Road and track. These cyclist were in the forefront of where the sport originated from. They could not compete at the highest  level due to apartheid. These are our struggle hero's.
-                                    </div>
-                                </div>
-                                <span class="show-more-button"></span>
-                            </div>
-                            <div class="slide">
-                                <img src="https://raw.githubusercontent.com/HendricksK/sacos_images/master/rider/4_michael_williams/micheal_williams.jpeg">
-                                <div class="slide-data">
-                                    <div class="content show-more">Basil Williams was one of three brothers, he was the oldest, his Brother Ralph Williams was also a cyclist the father of Michael Williams. Basil was a Champion on the Road and track. These cyclist were in the forefront of where the sport originated from. They could not compete at the highest  level due to apartheid. These are our struggle hero's.
-                                    </div>
-                                </div>
-                                <span class="show-more-button"></span>
-                            </div>
-                        </div>
+                        <div class="rider-slider" id="rider-banner"></div>
                     </div>
                 </div>
             </div>
@@ -79,11 +21,11 @@
             <div class="columns is-mobile">
                 <div class="column">
                     <div class="description" style="text-align: center;">
-                        <div class="content">
-                            <p>We are trying to start a historical log of the SACOS cycling team, if you have anything to contribute, please contact the below email.<br>When emailing, please add a return email address, the years for which the data / images / articles you are sending cover. Your personal contact information will not be shared on the website, or used for anything other than verifying information if required.</p>
+                        <div class="content" id="description-content">
+                            
                         </div>
-                        <div class="links">
-                            <a href="mailto:sacoshistoricalsite@gmail.com" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">sacoshistoricalsite@gmail.com</a>
+                        <div class="links" id="description-links">
+                            
                         </div>
                     </div>
                 </div>
@@ -102,93 +44,161 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-<script text="text/javascript">
-$(document).ready(function(){
-    $('.rider-slider').slick({
-	  	slidesToShow: 3,
-	  	slidesToScroll: 3,
-        dots: true,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    });
-});
-</script> 
-
-<script type="text/javascript">
-
-var show_more_btns =  document.getElementsByClassName('show-more')
-
-if (typeof(show_more_btns) != 'undefined' && show_more_btns != null) {
-  for (var i = 0; i < show_more_btns.length; i++) {
-      show_more_btns[i].setAttribute('id', 'show-more-'+i); 
-      var show_more_id = 'show-more-'+i
-      document.getElementById(show_more_id).addEventListener('click', showMoreOpenClose);
-  }
-}
-
-function showMoreOpenClose(e) {
-
-	if (document.getElementById(e.target.id).classList.length > 1) {
-
-        console.log(document.getElementById(e.target.id).classList)
-
-		var class_list = document.getElementById(e.target.id).classList
-
-    	if (class_list[2] === 'open') {
-    		  document.getElementById(e.target.id).classList.remove('open')
-    		  document.getElementById(e.target.id).classList.add('closed')
-    	} else if (class_list[2] === 'closed') {
-    		  document.getElementById(e.target.id).classList.remove('closed')
-    		  document.getElementById(e.target.id).classList.add('open')
-    	} else {
-            document.getElementById(e.target.id).classList.add('open')
-        }
-    }
-}
-</script>
-
 <script type="text/javascript">
 
     // https://hashnode.com/post/7-different-ways-to-make-ajax-calls-in-javascript-in-2019-cjr7pi2fl000gdjs2zgssqwhr
-    let apiurl = window.localStorage.getItem('apiurl')
+    home(init)
 
-    let xhr = new XMLHttpRequest()
-    let url = apiurl + '/page/1'
+    function home(callback) {
+        let apiurl = window.localStorage.getItem('apiurl')
 
-    xhr.open("GET", url)
-    xhr.setRequestHeader('Accept', 'application/json')
-    xhr.send()
+        let xhr = new XMLHttpRequest()
+        let url = apiurl + '/page/1'
 
-    xhr.onreadystatechange=(e)=>{
-        console.log(xhr.responseText)
+        xhr.open("GET", url)
+        xhr.setRequestHeader('Accept', 'application/json; charset=UTF-8')
+        xhr.send()
+
+        xhr.onreadystatechange = (e) => {
+            if (xhr.readyState === 4) {
+                renderHtml(JSON.parse(xhr.responseText))
+                //Wait until data is done being retrieved then run callback
+                callback()    
+            }
+        }    
+    }
+       
+
+    function renderHtml(data) {
+        
+        let heading = ''
+        let banner = ''
+        let content = ''        
+        let postdata = data.Post_data
+
+        for (let x = 0; x < postdata.length; x++) {
+
+            if (postdata[x].Section === 'banner') {
+                banner = JSON.parse(postdata[x].Page_data_string)
+            }
+            if (postdata[x].Section === 'heading') {
+                heading = JSON.parse(postdata[x].Page_data_string)
+            }
+            if (postdata[x].Section === 'content') {
+                content = JSON.parse(postdata[x].Page_data_string)
+            }
+        }
+
+        console.log(banner.banner.length)
+
+        if (heading !== '') {
+            document.getElementById('title').innerHTML = heading.heading;
+        }
+
+        if (banner !== '') {
+            let slider = ''
+            for (let i = 0; i < banner.banner.length; i++) {
+                slider = slider + renderBannerSlider(banner.banner[i])
+            }
+            console.log(slider)
+            document.getElementById('rider-banner').innerHTML = slider;
+        }
+
+        if (content !== '') {
+            document.getElementById('description-content').innerHTML = content.content;
+            document.getElementById('description-links').innerHTML = '<a href="mailto:' + content.contact + '" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">' + content.contact + '</a>'    
+        }
     }
 
+    function init() {
+
+        document.getElementById('pageloader').classList.remove('is-active')
+
+        var show_more_btns =  document.getElementsByClassName('show-more-button')
+        console.log(show_more_btns)
+
+        if (typeof(show_more_btns) != 'undefined' && show_more_btns != null) {
+          for (var i = 0; i < show_more_btns.length; i++) {
+              show_more_btns[i].parentElement.setAttribute('id', 'show-more-'+i); 
+              var show_more_id = 'show-more-'+i
+              document.getElementById(show_more_id).addEventListener('click', showMoreOpenClose);
+          }
+        }
+
+        function showMoreOpenClose(e) {
+            console.log(e.target.parentElement)
+            if (document.getElementById(e.target.parentElement.id).classList.length > 1) {
+                
+                var class_list = document.getElementById(e.target.parentElement.id).classList
+
+                if (class_list[2] === 'open') {
+                      document.getElementById(e.target.parentElement.id).classList.remove('open')
+                      document.getElementById(e.target.parentElement.id).classList.add('closed')
+                } else if (class_list[2] === 'closed') {
+                      document.getElementById(e.target.parentElement.id).classList.remove('closed')
+                      document.getElementById(e.target.parentElement.id).classList.add('open')
+                } else {
+                    document.getElementById(e.target.parentElement.id).classList.add('open')
+                }
+            }
+        }
+
+        $('.rider-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: true,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 2
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    }
+
+    function renderBannerSlider(slidedata) {
+        if (slidedata.image[0].collapsable === true) {
+            return '<div class="slide">'
+                + '<img src="' + slidedata.image[0].img_url + '">'
+                + '<div class="slide-data">'
+                    + '<div class="content show-more">' 
+                    + slidedata.image[0].data 
+                    + '<span class="show-more-button"></span>'
+                    + '</div>'
+                + '</div>'
+            + '</div>'
+        } else {
+            return '<div class="slide">'
+                + '<img src="' + slidedata.image[0].img_url + '">'
+                + '<div class="slide-data">'
+                    + '<div class="content show-more">' + slidedata.image[0].data + '</div>'
+                + '</div>'
+            + '</div>'
+        }
+        
+    }
 
 </script>
 </html>
