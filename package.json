@@ -1,0 +1,27 @@
+{
+  "name": "sacos-cycling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "grun": "^0.2.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "load-grunt-tasks": "^5.1.0"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HendricksK/sacos-cycling.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HendricksK/sacos-cycling/issues"
+  },
+  "homepage": "https://github.com/HendricksK/sacos-cycling#readme"
+}

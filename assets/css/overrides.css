@@ -25,6 +25,7 @@
 .rider-slider .slick-slide {
     background: #e3b602;
     text-align: center;
+    height: auto;
 }
 
 .rider-slider .slick-slide img {
@@ -103,6 +104,10 @@
 
 .slick-dots li {
     width: 40px !important;
+}
+
+.slick-dots {
+    bottom: -35px;
 }
 
 /*.slider-container {

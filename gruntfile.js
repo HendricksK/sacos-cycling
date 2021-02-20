@@ -1,13 +1,21 @@
-module.exports = function(grunt) {
-  grunt.initConfig ({
-    sass: {
-      dist: {
-        files: {
-          'assets/css/override.css' : 'assets/scss/style.scss'
-        }
-      }
-    }
+const sass = require('node-sass');
 
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.registerTask('default', ['sass']);
+module.exports = function(grunt) {
+    // require('load-grunt-tasks')(grunt);
+     
+    grunt.initConfig({
+        sass: {
+            options: {
+                implementation: sass,
+            },
+            dist: {
+                files: {
+                    '/assets/css/main.css': '/assets/scss/override.scss'
+                }
+            }
+        }
+    });
+     
+    grunt.registerTask('default', ['sass']);
 };
+

@@ -94,6 +94,7 @@
 
 </body>
 
+<script type="module" src="/sacos-cycling/modules/config.js"></script>
 <script type="module" src="/sacos-cycling/modules/head.js"></script>
 <script type="module" src="/sacos-cycling/modules/nav.js"></script>
 
@@ -170,10 +171,24 @@ function showMoreOpenClose(e) {
         }
     }
 }
+</script>
 
-const myPromise = new Promise((resolve, reject) => {  
-    let condition;  
-});
+<script type="text/javascript">
+
+    // https://hashnode.com/post/7-different-ways-to-make-ajax-calls-in-javascript-in-2019-cjr7pi2fl000gdjs2zgssqwhr
+    let apiurl = window.localStorage.getItem('apiurl')
+
+    let xhr = new XMLHttpRequest()
+    let url = apiurl + '/page/1'
+
+    xhr.open("GET", url)
+    xhr.setRequestHeader('Accept', 'application/json')
+    xhr.send()
+
+    xhr.onreadystatechange=(e)=>{
+        console.log(xhr.responseText)
+    }
+
 
 </script>
 </html>
