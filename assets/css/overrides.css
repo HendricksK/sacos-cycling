@@ -64,14 +64,13 @@
 
 .rider-slider .slick-slide .show-more-button {
     float: right;
-    top: 17em;
+    top: 16.5em;
     position: absolute;
     height: 40px;
-    display: block;
-    padding-left: 29em;    
+    display: block;    
 }
 
-.rider-slider .slick-slide .show-more-button::hover { 
+.rider-slider .slick-slide .show-more-button:hover { 
     cursor: pointer;
 }
 
@@ -140,13 +139,6 @@
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-    .rider-slider .slick-slide .show-more-button {
-        top: 17.5em;
-        padding-left: 27.75em;
-    }
-}
-
 
 @media screen and (max-width: 400px) {
     .slick-dots {
@@ -157,10 +149,6 @@
         font-size: 50px;
     }
 
-    .rider-slider .slick-slide .show-more-button {
-        top: 16.5em;
-        padding-left: 18em;
-    }
 }
 
 
