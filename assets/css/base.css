@@ -247,3 +247,7 @@ a:hover {
     float: left;
 }
 
+#rider-hero-image img {
+    width: auto;
+    margin: 0 auto;
+}

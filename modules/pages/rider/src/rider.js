@@ -43,58 +43,57 @@ function init() {
 }
 
 function renderHtml(data) {
-	
-	console.log(data)
 
 	let rider = data
-	let heading = rider.Name
-	let riderdata = JSON.parse(rider.Rider_data)
+	let heading = rider.name
+	let riderdata = JSON.parse(rider.rider_data)
 
     if (heading !== '') {
-        document.getElementById('rider-name').innerHTML = heading;
+        document.getElementById('rider-name').innerHTML = heading
     }
 
     if (riderdata !== '') {
-        document.getElementById('title').innerHTML = riderdata.information;
+    	console.log(riderdata.information);
+    	if(typeof(riderdata.information) !== 'undefined') {
+    		document.getElementById('rider-information').innerHTML = riderdata.information
+    	}
+        if(typeof(riderdata.image) !== 'undefined') {
+    		document.getElementById('rider-hero-image').innerHTML = '<img src="' + riderdata.image + '">'
+    	}
+    }
+
+    if (typeof(rider.images) !== 'undefined') {
+    	let images = ''
+    	
+    	console.log(rider.images.length)
+
+    	for (let x = 0; x < rider.images.length; x++) {
+    		images = images + renderRiderGallery(rider.images[x], rider.name)
+    	}
+
+    	document.getElementById('rider-images').innerHTML = images	
     }
 
 }
 
-function renderRiderGallery(rider) {
-	// let riderinfo = JSON.parse(rider.Rider_data)
-	// let riderurl = window.localStorage.getItem('riderurl')
+function renderRiderGallery(image, rider) {
 
-	// return '<div class="tile is-2 rider-container">'
- //            + '<a href="' + riderurl + '?id=' + rider.Id + '">'
- //            + '<figure class="image">'
- //            + '<img src="' + riderinfo.image + '">'
- //            + '</figure>'
- //            + '<div class="rider-name">' + rider.Name + '</div>'
- //            + '</a>'
- //          	+ '</div>'
+return '<div class="column">'
+	    + '<div class="card">'
+	    	+ '<div class="card-image">'
+	            + '<figure class="image is-2by1">'
+	                + '<img src="' + image.url + '" alt="Placeholder image">'
+	            + '</figure>'
+	        + '</div>'
+	        + '<div class="card-content">'
+	            + '<div class="media">'
+	                + '<div class="media-content">'
+	                + '</div>'
+	            + '</div>'
+	            + '<div class="content">'
+	            + '</div>'
+	        + '</div>'
+	    + '</div>'
+	+ '</div>'
 
- // <div class="column">
- //                    <div class="card">
- //                        <div class="card-image">
- //                            <figure class="image is-2by1">
- //                                <img src="https://images.pexels.com/photos/167635/pexels-photo-167635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Placeholder image">
- //                            </figure>
- //                        </div>
- //                        <div class="card-content">
- //                            <div class="media">
- //                                <div class="media-content">
- //                                    <p class="title is-4">John Smith</p>
- //                                    <p class="subtitle is-6">@johnsmith</p>
- //                                </div>
- //                            </div>
-
- //                            <div class="content">
- //                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
- //                                <a>@bulmaio</a>.
- //                                <a href="#">#css</a>
- //                                <a href="#">#responsive</a>
- //                            </div>
- //                        </div>
- //                    </div>
- //                </div>
 }
