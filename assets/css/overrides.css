@@ -1,5 +1,5 @@
 /* overriding bulma CSS */
-#about, #home {
+#about, #home, #riders {
     text-align: center;
 }
 
@@ -139,6 +139,18 @@
     text-align: center;
 }
 
+
+#riders .gallery-list .image img {
+    max-width: 300px;
+    width: auto;
+    margin: 0 auto;
+}
+
+#riders .gallery-list .rider-container {
+    float: left;
+    margin: 0 auto;
+    width: auto;
+}
 
 @media screen and (max-width: 400px) {
     .slick-dots {

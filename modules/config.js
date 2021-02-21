@@ -9,3 +9,5 @@ if(url.includes('127.0.0.1')) {
 	window.localStorage.setItem('apiurl', 'https://sacos-backend-go.herokuapp.com')
 	window.localStorage.setItem('baseurl', 'https://hendricksk.github.io/sacos-cycling')
 }
+
+window.localStorage.setItem('riderurl', '/sacos-cycling/pages/riders/rider')
