@@ -26,18 +26,18 @@ function renderHtml(data) {
     let heading = ''
     let banner = ''
     let content = ''        
-    let postdata = data.Post_data
+    let postdata = data.post_data
 
     for (let x = 0; x < postdata.length; x++) {
 
-        if (postdata[x].Section === 'banner') {
-            banner = JSON.parse(postdata[x].Page_data_string)
+        if (postdata[x].section === 'banner') {
+            banner = JSON.parse(postdata[x].page_data_string)
         }
-        if (postdata[x].Section === 'heading') {
-            heading = JSON.parse(postdata[x].Page_data_string)
+        if (postdata[x].section === 'heading') {
+            heading = JSON.parse(postdata[x].page_data_string)
         }
-        if (postdata[x].Section === 'content') {
-            content = JSON.parse(postdata[x].Page_data_string)
+        if (postdata[x].section === 'content') {
+            content = JSON.parse(postdata[x].page_data_string)
         }
     }
 
