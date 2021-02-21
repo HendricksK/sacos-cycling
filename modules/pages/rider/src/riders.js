@@ -41,15 +41,16 @@ function renderHtml(data) {
 }
 
 function renderRiderBlock(rider) {
-	let riderinfo = JSON.parse(rider.Rider_data)
+
+	let riderinfo = JSON.parse(rider.rider_data)
 	let riderurl = window.localStorage.getItem('riderurl')
 
 	return '<div class="tile is-2 rider-container">'
-            + '<a href="' + riderurl + '?id=' + rider.Id + '">'
+            + '<a href="' + riderurl + '?id=' + rider.id + '">'
             + '<figure class="image">'
             + '<img src="' + riderinfo.image + '">'
             + '</figure>'
-            + '<div class="rider-name">' + rider.Name + '</div>'
+            + '<div class="rider-name">' + rider.name + '</div>'
             + '</a>'
           	+ '</div>'
 }
