@@ -76,6 +76,10 @@ function init() {
 
     function showMoreOpenClose(e) {
 
+        if (!e.target.parentElement.id) {
+            return
+        }
+
         if (document.getElementById(e.target.parentElement.id).classList.length > 1) {
             
             var class_list = document.getElementById(e.target.parentElement.id).classList

@@ -4,7 +4,7 @@ const riderid = getParameterByName('id'); // Should never change.
 
 // TODO: Will need to error out gracefully somehow
 if (riderid === '') {
-	document.getElementById('pageloader').classList.remove('is-active')
+    document.getElementById('pageloader').classList.remove('is-active')
 }
 // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
 function getParameterByName(name, url = window.location.href) {
@@ -38,40 +38,40 @@ function home(callback) {
 }
 
 function init() {
-	// Remove page loader
-	document.getElementById('pageloader').classList.remove('is-active')
+    // Remove page loader
+    document.getElementById('pageloader').classList.remove('is-active')
 }
 
 function renderHtml(data) {
 
-	let rider = data
-	let heading = rider.name
-	let riderdata = JSON.parse(rider.rider_data)
+    let rider = data
+    let heading = rider.name
+    let riderdata = JSON.parse(rider.rider_data)
 
     if (heading !== '') {
         document.getElementById('rider-name').innerHTML = heading
     }
 
     if (riderdata !== '') {
-    	console.log(riderdata.information);
-    	if(typeof(riderdata.information) !== 'undefined') {
-    		document.getElementById('rider-information').innerHTML = riderdata.information
-    	}
+        if(typeof(riderdata.information) !== 'undefined') {
+            document.getElementById('rider-information').innerHTML = riderdata.information
+        }
         if(typeof(riderdata.image) !== 'undefined') {
-    		document.getElementById('rider-hero-image').innerHTML = '<img src="' + riderdata.image + '">'
-    	}
+            document.getElementById('rider-hero-image').innerHTML = '<img src="' + riderdata.image + '">'
+        }
     }
 
     if (typeof(rider.images) !== 'undefined') {
-    	let images = ''
-    	
-    	console.log(rider.images.length)
+        let images = ''
 
-    	for (let x = 0; x < rider.images.length; x++) {
-    		images = images + renderRiderGallery(rider.images[x], rider.name)
-    	}
+        if (rider.images !== null) {
+            for (let x = 0; x < rider.images.length; x++) {
+                images = images + renderRiderGallery(rider.images[x], rider.name)
+            }   
+        }
+        
 
-    	document.getElementById('rider-images').innerHTML = images	
+        document.getElementById('rider-images').innerHTML = images  
     }
 
 }
@@ -79,21 +79,21 @@ function renderHtml(data) {
 function renderRiderGallery(image, rider) {
 
 return '<div class="column">'
-	    + '<div class="card">'
-	    	+ '<div class="card-image">'
-	            + '<figure class="image is-2by1">'
-	                + '<img src="' + image.url + '" alt="Placeholder image">'
-	            + '</figure>'
-	        + '</div>'
-	        + '<div class="card-content">'
-	            + '<div class="media">'
-	                + '<div class="media-content">'
-	                + '</div>'
-	            + '</div>'
-	            + '<div class="content">'
-	            + '</div>'
-	        + '</div>'
-	    + '</div>'
-	+ '</div>'
+        + '<div class="card">'
+            + '<div class="card-image">'
+                + '<figure class="image is-2by1">'
+                    + '<img src="' + image.url + '" alt="Placeholder image">'
+                + '</figure>'
+            + '</div>'
+            + '<div class="card-content">'
+                + '<div class="media">'
+                    + '<div class="media-content">'
+                    + '</div>'
+                + '</div>'
+                + '<div class="content">'
+                + '</div>'
+            + '</div>'
+        + '</div>'
+    + '</div>'
 
 }

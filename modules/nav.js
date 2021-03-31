@@ -3,9 +3,8 @@ let nav =
     '<title></title>' +
     '<nav class="navbar" role="navigation" aria-label="main navigation">' + 
       '<div class="navbar-brand">' + 
-        '<a class="navbar-item p-0" href="/">' +
-          '<span class="material-icons" style="color:#e3b602">'+            
-          '</span>' +
+        '<a class="navbar-item p-0" href="' + baseurl + '">' +
+          '<span class="material-icons" style="color:#e3b602">directions_bike</span>' +
         '</a>' +
         '<a class="navbar-item" style="color:#e3b602" href="' + baseurl + '/pages/articles">' +
             'Articles' + 
