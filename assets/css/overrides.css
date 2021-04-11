@@ -167,6 +167,10 @@ h3 {
     width: auto;
 }
 
+#articles #articles-list {
+    text-align: center;
+}
+
 @media screen and (max-width: 400px) {
     .slick-dots {
         bottom: -50px;
