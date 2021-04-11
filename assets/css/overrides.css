@@ -167,8 +167,12 @@ h3 {
     width: auto;
 }
 
-#articles #articles-list {
+#article #articles-list {
     text-align: center;
+}
+
+#article #article-text { 
+    white-space: pre-wrap; 
 }
 
 @media screen and (max-width: 400px) {
