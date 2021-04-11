@@ -1,0 +1,1 @@
+TODO: lib folder will hold helper classes for repetative functions such init(), home()
