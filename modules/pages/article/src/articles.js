@@ -48,6 +48,6 @@ function renderHtml(data) {
 function renderArticlListItem(article) {
 
     return '<li>'
-            + '<a href="' + articleurl + '?id=' + article.id + '">' + article.name + '&nbsp;' +  article.author + '</a>'
+            + '<a href="' + articleurl + '?id=' + article.id + '">' + article.name + ':&nbsp;' +  article.author + '</a>'
             + '</li>'
 }
