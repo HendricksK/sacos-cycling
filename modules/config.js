@@ -11,4 +11,4 @@ if(url.includes('127.0.0.1')) {
 }
 
 window.localStorage.setItem('riderurl', '/sacos-cycling/pages/riders/rider/index.html')
-window.localStorage.setItem('article', '/sacos-cycling/pages/articles/article')
+window.localStorage.setItem('articleurl', '/sacos-cycling/pages/articles/article/index.html')
