@@ -10,5 +10,5 @@ if(url.includes('127.0.0.1')) {
 	window.localStorage.setItem('baseurl', 'https://hendricksk.github.io/sacos-cycling')
 }
 
-window.localStorage.setItem('riderurl', '/sacos-cycling/pages/riders/rider/index.html')
-window.localStorage.setItem('articleurl', '/sacos-cycling/pages/articles/article/index.html')
+window.localStorage.setItem('riderurl', '/pages/riders/rider/index.html')
+window.localStorage.setItem('articleurl', '/pages/articles/article/index.html')
