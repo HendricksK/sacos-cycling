@@ -1,6 +1,7 @@
 let head = document.head.innerHTML
 head = head 
 	+ '<meta charset="UTF-8">'
+	+ '<meta name=viewport content="width=device-width, initial-scale=1">'
 	+ '<link rel="shortcut icon" type="image/jpg" href="/assets/favicon-32x32.png"/>'
 	+ '<title>Sacos Cycling</title>'
 	+ '<link rel="stylesheet" href="/assets/css/bulma.min.css">'
