@@ -6,13 +6,13 @@ let nav =
         '<a class="navbar-item p-0" href="' + baseurl + '">' +
           '<span class="material-icons" style="color:#e3b602">directions_bike</span>' +
         '</a>' +
-        '<a class="navbar-item" style="color:#e3b602" href="' + baseurl + '/pages/articles">' +
+        '<a class="navbar-item" style="color:#e3b602" href="#' +
             'Articles' + 
         '</a>' +
-        '<a class="navbar-item" style="color:#e3b602" href="' + baseurl + '/pages/riders">' +
+        '<a class="navbar-item" style="color:#e3b602" href="#' +
             'Riders' + 
         '</a>' + 
-        '<a class="navbar-item" style="color:#e3b602" href="' + baseurl + '/pages/about">' +
+        '<a class="navbar-item" style="color:#e3b602" href="#' +
             'About' + 
         '</a>' + 
       '</div>' + 
