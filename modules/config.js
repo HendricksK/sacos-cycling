@@ -6,7 +6,7 @@ if(url.includes('127.0.0.1')) {
 	window.localStorage.setItem('apiurl', 'http://localhost:6660')
 	window.localStorage.setItem('baseurl', 'http://127.0.0.1:8080')
 } else {
-	window.localStorage.setItem('apiurl', 'https://sacos-backend-go.herokuapp.com')
+	// window.localStorage.setItem('apiurl', 'https://sacos-backend-go.herokuapp.com')
 	window.localStorage.setItem('baseurl', 'https://cycling.sacoshistory.org')
 }
 

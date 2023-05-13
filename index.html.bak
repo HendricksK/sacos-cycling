@@ -1,0 +1,48 @@
+<html>
+  	<head></head>
+<body>
+    <nav id="nav"></nav>
+    <div class="pageloader is-active" id="pageloader"><span class="title">Sacos Cycling History Loading</span></div>
+    <div class="container" id="home">
+        <section class="section" id="heading">
+            <h1 class="title" id="title"></h1>
+        </section>
+        <section id="banner" class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-full slider-container">
+                        <div class="rider-slider" id="rider-banner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="content" class="section">
+            <div class="columns is-mobile">
+                <div class="column">
+                    <div class="description" style="text-align: center;">
+                        <div class="content" id="description-content">
+                            
+                        </div>
+                        <div class="links" id="description-links">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<footer id="footer"></footer>
+
+</body>
+
+<script type="module" src="/modules/config.js"></script>
+<script type="module" src="/modules/head.js"></script>
+<script type="module" src="/modules/nav.js"></script>
+<script type="module" src="/modules/pages/home/build/home.min.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</html>
