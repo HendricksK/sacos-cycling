@@ -8,11 +8,12 @@ function home(callback) {
     let url = apiurl + '/page/1'
 
     xhr.open("GET", url)
-    xhr.setRequestHeader('Accept', 'application/json; charset=UTF-8')
+    xhr.setRequestHeader('Accept', 'application/json charset=UTF-8')
     xhr.send()
 
     xhr.onreadystatechange = (e) => {
         if (xhr.readyState === 4) {
+
             renderHtml(JSON.parse(xhr.responseText))
             //Wait until data is done being retrieved then run callback
             callback()
@@ -26,37 +27,44 @@ function renderHtml(data) {
     let heading = ''
     let banner = ''
     let content = ''        
-    let postdata = data.post_data
+    let posts = data.posts
 
-    for (let x = 0; x < postdata.length; x++) {
+    for (let x = 0; x < posts.length; x++) {
 
-        if (postdata[x].section === 'banner') {
-            banner = JSON.parse(postdata[x].page_data_string)
+        if (posts[x].section === 'banner') {
+            banner = JSON.parse(posts[x].data_json)
         }
-        if (postdata[x].section === 'heading') {
-            heading = JSON.parse(postdata[x].page_data_string)
+        if (posts[x].section === 'heading') {
+            heading = JSON.parse(posts[x].data_json)
         }
-        if (postdata[x].section === 'content') {
-            content = JSON.parse(postdata[x].page_data_string)
+        if (posts[x].section === 'content') {
+            content = JSON.parse(posts[x].data_json)
         }
     }
 
     if (heading !== '') {
-        document.getElementById('title').innerHTML = heading.heading;
+        console.log(heading)
+        document.getElementById('title').innerHTML = heading.data.toUpperCase()
     }
 
     if (banner !== '') {
-        let slider = ''
-        for (let i = 0; i < banner.banner.length; i++) {
-            slider = slider + renderBannerSlider(banner.banner[i])
-        }
+        console.log(banner)
+        // let slider = ''
+        // for (let i = 0 i < banner.banner.length i++) {
+        //     slider = slider + renderBannerSlider(banner.banner[i])
+        // }
 
-        document.getElementById('rider-banner').innerHTML = slider;
+        // document.getElementById('rider-banner').innerHTML = slider
     }
 
     if (content !== '') {
-        document.getElementById('description-content').innerHTML = content.content;
-        document.getElementById('description-links').innerHTML = '<a href="mailto:' + content.contact + '" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">' + content.contact + '</a>'    
+        console.log(content.data.content[0])
+        // stuff = Object.keys(content.data).map(v => ({
+        //     [v]: {...content.data[v]}
+        // }))
+        // console.log(stuff)
+        document.getElementById('description-content').innerHTML = content.data.content
+        document.getElementById('description-links').innerHTML = '<a href="mailto:' + content.data.contact + '" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">' + content.data.contact + '</a>'    
     }
 }
 
@@ -68,9 +76,9 @@ function init() {
 
     if (typeof(show_more_btns) != 'undefined' && show_more_btns != null) {
       for (var i = 0; i < show_more_btns.length; i++) {
-          show_more_btns[i].parentElement.setAttribute('id', 'show-more-'+i); 
+          show_more_btns[i].parentElement.setAttribute('id', 'show-more-'+i) 
           var show_more_id = 'show-more-'+i
-          document.getElementById(show_more_id).addEventListener('click', showMoreOpenClose);
+          document.getElementById(show_more_id).addEventListener('click', showMoreOpenClose)
       }
     }
 
@@ -128,7 +136,7 @@ function init() {
             // settings: "unslick"
             // instead of a settings object
         ]
-    });
+    })
 }
 
 function renderBannerSlider(slidedata) {
