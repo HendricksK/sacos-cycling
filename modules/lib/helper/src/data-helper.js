@@ -73,3 +73,7 @@ export function returnSliderHTML(slidedata) {
     return slideHTML
     
 }
+
+export function renderImageBlock(imagedata) {
+    
+}

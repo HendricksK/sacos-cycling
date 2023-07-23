@@ -1,22 +1,25 @@
 // https://hashnode.com/post/7-different-ways-to-make-ajax-calls-in-javascript-in-2019-cjr7pi2fl000gdjs2zgssqwhr
+import { getParameterByName } from "../../../lib/helper/src/url-helper.js";
+import { removeLoader } from "../../../lib/helper/src/loader-helper.js";
+
 
 const riderid = getParameterByName('id'); // Should never change.
 
-// TODO: Will need to error out gracefully somehow
-if (riderid === '') {
-    document.getElementById('pageloader').classList.remove('is-active')
-}
+// // TODO: Will need to error out gracefully somehow
+// if (riderid === '') {
+//     document.getElementById('pageloader').classList.remove('is-active')
+// }
 // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-function getParameterByName(name, url = window.location.href) {
-    name = name.replace(/[\[\]]/g, '\\$&');
-    let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
+// function getParameterByName(name, url = window.location.href) {
+//     name = name.replace(/[\[\]]/g, '\\$&');
+//     let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+//         results = regex.exec(url);
+//     if (!results) return null;
+//     if (!results[2]) return '';
+//     return decodeURIComponent(results[2].replace(/\+/g, ' '));
+// }
 
-rider(init)
+rider(removeLoader)
 
 function rider(callback) {
     let apiurl = window.localStorage.getItem('apiurl')
@@ -37,12 +40,10 @@ function rider(callback) {
     }    
 }
 
-function init() {
-    // Remove page loader
-    document.getElementById('pageloader').classList.remove('is-active')
-}
-
 function renderHtml(data) {
+
+    console.log(data)
+    return
 
     let rider = data
     let heading = rider.name

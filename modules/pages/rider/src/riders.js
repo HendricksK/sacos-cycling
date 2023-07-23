@@ -29,14 +29,17 @@ function renderHtml(data) {
 
 	let riders = data
 
-    if (riders !== '') {
-        let gallery = ''
-        for (let i = 0; i < riders.length; i++) {
-            gallery = gallery + renderRiderBlock(riders[i])
-        }
 
-        document.getElementById('rider-listing').innerHTML = gallery;
-    }
+    console.log(riders)
+    
+    // if (riders !== '') {
+    //     let gallery = ''
+    //     for (let i = 0; i < riders.length; i++) {
+    //         gallery = gallery + renderRiderBlock(riders[i])
+    //     }
+
+    //     document.getElementById('rider-listing').innerHTML = gallery;
+    // }
 
 }
 

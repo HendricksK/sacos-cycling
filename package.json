@@ -4,12 +4,12 @@
   "description": "",
   "main": "gruntfile.js",
   "dependencies": {
-    "grunt-contrib-sass": "^2.0.0",
     "load-grunt-tasks": "^5.1.0"
   },
   "devDependencies": {
     "grunt": "^1.6.1",
-    "node-sass": "^9.0.0"
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
