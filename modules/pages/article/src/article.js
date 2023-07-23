@@ -26,11 +26,10 @@ function aricle(callback) {
 }
 
 function renderHtml(data) {
-	const rider = data
-	const heading = rider.name
-	const article_data = rider.article_data
-	const author = rider.author
-	const date_time = rider.datetime
+	let article = data
+	let heading = article.name
+	let article_data = article.data
+	let author = article.author
 
 	if (heading !== '') {
         document.getElementById('article-header').innerHTML = heading
@@ -42,9 +41,5 @@ function renderHtml(data) {
 
     if (author !== '') {
         document.getElementById('article-author').innerHTML = author
-    }
-
-    if (date_time !== '') {
-        document.getElementById('article-datetime').innerHTML = date_time
     }
 }
