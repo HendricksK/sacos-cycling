@@ -1,9 +1,9 @@
 // https://hashnode.com/post/7-different-ways-to-make-ajax-calls-in-javascript-in-2019-cjr7pi2fl000gdjs2zgssqwhr
-home(init)
+articles(init)
 
 const articleurl = window.localStorage.getItem('articleurl')
 
-function home(callback) {
+function articles(callback) {
 
     const apiurl = window.localStorage.getItem('apiurl')
     const xhr = new XMLHttpRequest()

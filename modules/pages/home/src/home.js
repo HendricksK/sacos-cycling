@@ -1,4 +1,8 @@
 // https://hashnode.com/post/7-different-ways-to-make-ajax-calls-in-javascript-in-2019-cjr7pi2fl000gdjs2zgssqwhr
+
+import { returnMappedData, returnSliderHTML } from "../../../lib/helper/src/data-helper.js";
+
+
 home(init)
 
 function home(callback) {
@@ -43,28 +47,40 @@ function renderHtml(data) {
     }
 
     if (heading !== '') {
-        console.log(heading)
         document.getElementById('title').innerHTML = heading.data.toUpperCase()
     }
 
     if (banner !== '') {
-        console.log(banner)
-        // let slider = ''
-        // for (let i = 0 i < banner.banner.length i++) {
-        //     slider = slider + renderBannerSlider(banner.banner[i])
-        // }
+        let slider = ''
 
-        // document.getElementById('rider-banner').innerHTML = slider
+        let slides = banner.data.banner.slides
+        
+        for (let i = 0; i < slides.length; i++) {
+            console.log(slides[i])
+            slider = slider + returnSliderHTML(slides[i])
+        }
+
+        document.getElementById('rider-banner').innerHTML = slider
     }
 
     if (content !== '') {
-        console.log(content.data.content[0])
-        // stuff = Object.keys(content.data).map(v => ({
-        //     [v]: {...content.data[v]}
-        // }))
-        // console.log(stuff)
-        document.getElementById('description-content').innerHTML = content.data.content
-        document.getElementById('description-links').innerHTML = '<a href="mailto:' + content.data.contact + '" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">' + content.data.contact + '</a>'    
+        // I am not that well versed in json mapping https://medium.com/@sandhya.sadanandan/javascript-how-to-construct-an-array-of-json-objects-using-map-d1a513727008, this mapping function is nice, might add it to the library helpers
+        let contentHtml = '' 
+        let contentEmail = ''
+
+        content.data.content.map( function(data) {
+
+            if (data.content) {
+                contentHtml = data.content
+            }
+            if (data.email) {
+                contentEmail = data.email
+            }
+        });
+
+
+        document.getElementById('description-content').innerHTML = contentHtml
+        document.getElementById('description-links').innerHTML = '<a href="mailto:' + contentEmail + '" target="_blank" rel="noopener noreferrer" class="button--sacos_yellow">' + contentEmail + '</a>'    
     }
 }
 
@@ -137,26 +153,4 @@ function init() {
             // instead of a settings object
         ]
     })
-}
-
-function renderBannerSlider(slidedata) {
-    if (slidedata.image[0].collapsable === true) {
-        return '<div class="slide">'
-            + '<img src="' + slidedata.image[0].img_url + '">'
-            + '<div class="slide-data">'
-                + '<div class="content show-more">' 
-                + slidedata.image[0].data 
-                + '<span class="show-more-button"></span>'
-                + '</div>'
-            + '</div>'
-        + '</div>'
-    } else {
-        return '<div class="slide">'
-            + '<img src="' + slidedata.image[0].img_url + '">'
-            + '<div class="slide-data">'
-                + '<div class="content show-more">' + slidedata.image[0].data + '</div>'
-            + '</div>'
-        + '</div>'
-    }
-    
 }

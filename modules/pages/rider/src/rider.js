@@ -16,9 +16,9 @@ function getParameterByName(name, url = window.location.href) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-home(init)
+rider(init)
 
-function home(callback) {
+function rider(callback) {
     let apiurl = window.localStorage.getItem('apiurl')
 
     let xhr = new XMLHttpRequest()

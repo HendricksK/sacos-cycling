@@ -4,9 +4,9 @@ import { removeLoader } from "../../../lib/helper/src/loader-helper.js";
 
 const articleid = getParameterByName('id'); // Should never change.
 
-home(removeLoader)
+aricle(removeLoader)
 
-function home(callback) {
+function aricle(callback) {
     let apiurl = window.localStorage.getItem('apiurl')
 
     let xhr = new XMLHttpRequest()

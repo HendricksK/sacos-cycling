@@ -1,7 +1,7 @@
 // https://hashnode.com/post/7-different-ways-to-make-ajax-calls-in-javascript-in-2019-cjr7pi2fl000gdjs2zgssqwhr
-home(init)
+riders(init)
 
-function home(callback) {
+function riders(callback) {
     let apiurl = window.localStorage.getItem('apiurl')
 
     let xhr = new XMLHttpRequest()
