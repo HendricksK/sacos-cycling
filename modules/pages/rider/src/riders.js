@@ -1,3 +1,5 @@
+import { renderImageBlock } from "../../../lib/helper/src/data-helper.js";
+
 // https://hashnode.com/post/7-different-ways-to-make-ajax-calls-in-javascript-in-2019-cjr7pi2fl000gdjs2zgssqwhr
 riders(init)
 
@@ -29,31 +31,39 @@ function renderHtml(data) {
 
 	let riders = data
 
+    if (riders !== '') {
+        let gallery = ''
+        for (let i = 0; i < riders.length; i++) {
 
-    console.log(riders)
-    
-    // if (riders !== '') {
-    //     let gallery = ''
-    //     for (let i = 0; i < riders.length; i++) {
-    //         gallery = gallery + renderRiderBlock(riders[i])
-    //     }
+            let imagedata = {
+                "id": riders[i].id,
+                "tag": riders[i].first_name + ' ' + riders[i].last_name,
+                "img": riders[i].images[0].url
+            }
 
-    //     document.getElementById('rider-listing').innerHTML = gallery;
-    // }
+            gallery = gallery + renderImageBlock(imagedata, 'rider')
+        }
+
+        console.log(gallery)
+
+        document.getElementById('rider-listing').innerHTML = gallery;
+    }
 
 }
 
 function renderRiderBlock(rider) {
 
-	let riderinfo = JSON.parse(rider.rider_data)
-	let riderurl = window.localStorage.getItem('riderurl')
+	// let image = rider.images[0].url
+	// let url = window.localStorage.getItem('riderurl')
 
-	return '<div class="tile is-2 rider-container">'
-            + '<a href="' + riderurl + '?id=' + rider.id + '">'
-            + '<figure class="image">'
-            + '<img src="' + riderinfo.image + '">'
-            + '</figure>'
-            + '<div class="rider-name">' + rider.name + '</div>'
-            + '</a>'
-          	+ '</div>'
+    // console.log(rider.images[0])
+
+	// return '<div class="tile is-2 rider-container">'
+    //         + '<a href="' + url + '?id=' + rider.id + '">'
+    //         + '<figure class="image">'
+    //         + '<img src="' + image + '">'
+    //         + '</figure>'
+    //         + '<div class="rider-name">' + rider.first_name + '</div>'
+    //         + '</a>'
+    //       	+ '</div>'
 }

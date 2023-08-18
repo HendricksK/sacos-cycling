@@ -24,48 +24,25 @@ return unmappedObject.map( function(data) {
 
 }
 
-export function returnSliderHTML(slidedata) {
+export function returnSliderHTML(sliderdata) {
 
-    // Slide data JSON example
-    // {
-    //     "data": {
-    //         "banner": {
-    //             "slides": [{
-    //                 "data": "basil williams",
-    //                 "img_url": "https://raw.githubusercontent.com/HendricksK/sacos_images/b3eb4b6c904a56b0428fc2feaeda437a60080bba/rider/1_basil_williams/basil_williams_top_senior_1948.jpg",
-    //                 "collapsable": true
-    //             }, {
-    //                 "data": "basil williams",
-    //                 "img_url": "https://raw.githubusercontent.com/HendricksK/sacos_images/b3eb4b6c904a56b0428fc2feaeda437a60080bba/rider/1_basil_williams/basil_williams_top_senior_1948.jpg",
-    //                 "collapsable": false
-    //             }, {
-    //                 "data": "basil williams",
-    //                 "img_url": "https://raw.githubusercontent.com/HendricksK/sacos_images/b3eb4b6c904a56b0428fc2feaeda437a60080bba/rider/1_basil_williams/basil_williams_top_senior_1948.jpg",
-    //                 "collapsable": true
-    //             }]
-    //         }
-    //     }
-    // }
-
-    // console.log(slidedata)
-    // return
     let slideHTML = '';
 
-    if (slidedata.collapsable === true) {
+    if (sliderdata.collapsable === true) {
         slideHTML =  '<div class="slide">'
-            + '<img src="' + slidedata.img_url + '">'
+            + '<img src="' + sliderdata.img_url + '">'
             + '<div class="slide-data">'
                 + '<div class="content show-more">' 
-                + slidedata.data
+                + sliderdata.data
                 + '<span class="show-more-button"></span>'
                 + '</div>'
             + '</div>'
         + '</div>'
     } else {
         slideHTML =  '<div class="slide">'
-            + '<img src="' + slidedata.img_url + '">'
+            + '<img src="' + sliderdata.img_url + '">'
             + '<div class="slide-data">'
-                + '<div class="content show-more">' + slidedata.data + '</div>'
+                + '<div class="content show-more">' + sliderdata.data + '</div>'
             + '</div>'
         + '</div>'
     }
@@ -74,6 +51,16 @@ export function returnSliderHTML(slidedata) {
     
 }
 
-export function renderImageBlock(imagedata) {
-    
+export function renderImageBlock(imagedata, entity) {
+
+    let entityUrl = window.localStorage.getItem(entity + 'url')
+
+    return '<div class="tile is-2 '+ entity +'-container">'
+            + '<a href="' + entityUrl + '?id=' + imagedata.id + '">'
+            + '<figure class="image">'
+            + '<img src="' + imagedata.img + '">'
+            + '</figure>'
+            + '<div class="rider-name">' + imagedata.tag + '</div>'
+            + '</a>'
+            + '</div>'
 }
