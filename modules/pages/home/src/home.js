@@ -56,7 +56,6 @@ function renderHtml(data) {
         let slides = banner.data.banner.slides
         
         for (let i = 0; i < slides.length; i++) {
-            console.log(slides[i])
             slider = slider + returnSliderHTML(slides[i])
         }
 
@@ -68,15 +67,13 @@ function renderHtml(data) {
         let contentHtml = '' 
         let contentEmail = ''
 
-        content.data.content.map( function(data) {
+        if (content.data.content.data !== '') {
+            contentHtml = content.data.content.data
+        }
 
-            if (data.content) {
-                contentHtml = data.content
-            }
-            if (data.email) {
-                contentEmail = data.email
-            }
-        });
+        if (content.data.email.data !== '') {
+            contentEmail = content.data.email.data
+        }
 
 
         document.getElementById('description-content').innerHTML = contentHtml
