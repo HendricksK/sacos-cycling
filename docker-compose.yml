@@ -1,0 +1,23 @@
+version: '3.8'
+
+# Services
+services:
+    nginx:
+        build: 
+            dockerfile: ./deployment/local/nginx/nginx.dockerfile
+        container_name: sacos-nginx-frontend
+        ports:
+            - 8080:80
+        # links:
+        #     - 'go'
+        volumes:
+            - './deployment/local/nginx/conf.d:/etc/nginx/conf.d'
+            - './logs/nginx/:/var/log/nginx'
+            - './:/var/www/html'
+        networks: 
+            - backend        
+        # depends_on:
+        #     - go
+networks:
+    backend:
+        driver: bridge
